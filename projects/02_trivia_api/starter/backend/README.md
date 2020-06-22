@@ -1,5 +1,16 @@
 # Full Stack Trivia API Backend
 
+##  Trivia API
+
+Trivia api is web applaction to play quizzes
+
+The application features:
+
+1) Display questions - both all questions and by category. Questions should show the question, category and difficulty rating by default and can show/hide the answer. 
+2) Delete questions.
+3) Add questions and require that they include question and answer text.
+4) Search for questions based on a text query string.
+5) Play the quiz game, randomizing either all questions or within a specific category. 
 ## Getting Started
 
 ### Installing Dependencies
@@ -31,6 +42,10 @@ This will install all of the required packages we selected within the `requireme
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
 ## Database Setup
+Install [PostgreSQL](https://www.postgresql.org/download/) in your system and Create database using `psql` terminal
+```bash
+Create database trivia;
+```
 With Postgres running, restore a database using the trivia.psql file provided. From the backend folder in terminal run:
 ```bash
 psql trivia < trivia.psql
@@ -41,7 +56,13 @@ psql trivia < trivia.psql
 From within the `backend` directory first ensure you are working using your created virtual environment.
 
 To run the server, execute:
-
+for Windows 
+```bash
+set FLASK_APP=flaskr
+set FLASK_ENV=development
+flask run
+```
+for linux or macOS
 ```bash
 export FLASK_APP=flaskr
 export FLASK_ENV=development
@@ -52,49 +73,24 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
 
-## Tasks
+### Getting Started
+- Backend Base URL: http://127.0.0.1:5000/
+- Frontend Base URL: http://localhost:3000
+## API Reference
+[View the README.md within ./backend for more details.](./backend/README.md)
 
-One note before you delve into your tasks: for each endpoint you are expected to define the endpoint and response data. The frontend will be a plentiful resource because it is set up to expect certain endpoints and response data formats already. You should feel free to specify endpoints in your own way; if you do so, make sure to update the frontend or you will get some unexpected behavior. 
-
-1. Use Flask-CORS to enable cross-domain requests and set response headers. 
-2. Create an endpoint to handle GET requests for questions, including pagination (every 10 questions). This endpoint should return a list of questions, number of total questions, current category, categories. 
-3. Create an endpoint to handle GET requests for all available categories. 
-4. Create an endpoint to DELETE question using a question ID. 
-5. Create an endpoint to POST a new question, which will require the question and answer text, category, and difficulty score. 
-6. Create a POST endpoint to get questions based on category. 
-7. Create a POST endpoint to get questions based on a search term. It should return any questions for whom the search term is a substring of the question. 
-8. Create a POST endpoint to get questions to play the quiz. This endpoint should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions. 
-9. Create error handlers for all expected errors including 400, 404, 422 and 500. 
-
-REVIEW_COMMENT
-```
-This README is missing documentation of your endpoints. Below is an example for your endpoint to get all categories. Please use it as a reference for creating your documentation and resubmit your code. 
-
-Endpoints
-GET '/categories'
-GET ...
-POST ...
-DELETE ...
-
-GET '/categories'
-- Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
-- Request Arguments: None
-- Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs. 
-{'1' : "Science",
-'2' : "Art",
-'3' : "Geography",
-'4' : "History",
-'5' : "Entertainment",
-'6' : "Sports"}
-
-```
+## Backend
+[View the README.md within ./backend for more details.](./backend/README.md)
 
 
-## Testing
-To run the tests, run
-```
-dropdb trivia_test
-createdb trivia_test
-psql trivia_test < trivia.psql
-python test_flaskr.py
-```
+## Frontend
+
+[View the README.md within ./frontend for more details.](./frontend/README.md)
+
+
+## Authors
+ Sami Hassan
+
+ Udacity develop start code and develop frontend
+ ## Acknowledgements
+ We thanks Udacity to help and support 
